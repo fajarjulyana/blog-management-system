@@ -1,0 +1,16 @@
+<!-- views/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <ul>
+    <% data.forEach(item => { %>
+      <li><%= item.field_name %></li> <!-- Ganti field_name dengan nama kolom yang sesuai -->
+    <% }); %>
+  </ul>
+</body>
+</html>

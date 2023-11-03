@@ -1,0 +1,28 @@
+<!-- views/blogs.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blogs</title>
+</head>
+<body>
+  <h1>Blog Posts</h1>
+  <!-- views/blogs.ejs -->
+<!-- ... -->
+<ul>
+    <% blogs.forEach(blog => { %>
+      <li>
+        <h2><%= blog.title %></h2>
+        <p><%= blog.content %></p>
+        <a href="/blogs/<%= blog.id %>/edit">Edit</a>
+        <form method="post" action="/blogs/<%= blog.id %>/delete">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <!-- ... -->
+  
+  <a href="/blogs/new">Create New Blog</a>
+</body>
+</html>
